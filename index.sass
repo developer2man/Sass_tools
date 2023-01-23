@@ -1,0 +1,30 @@
+
+
+
+
+
+
+
+
+//-webkit-  for android, chrome and safari.
+//-moz-     for firefox.
+//-ms-      for internet explorer.
+//-o-       for opera browser.
+
+@use "sass:map"
+
+
+$margin-top: true
+
+@mixin prefixer($properity, $value, $comments: true)
+    $comment: ('-webkit-': 'for android, chrome and safari.' ,'-moz-':'for firefox.','-ms-':'for internet explorer','-o-':'for opera browser.','':'for standar')
+    
+    @each $prefix in ('-webkit-','-moz-','-ms-','-o-','')
+        #{$prefix}#{$properity}: $value#{';'} if($comments,#{'/*'} #{map.get($comment, $prefix)} #{'*/'},true)
+
+
+
+.body
+    @include prefixer(grid-template-columns,repeat(4, 1fr),  true)
+      
+

@@ -1,0 +1,7 @@
+.body {
+  -webkit-grid-template-columns: repeat(4, 1fr) ; /* for android, chrome and safari. */;
+  -moz-grid-template-columns: repeat(4, 1fr) ; /* for firefox. */;
+  -ms-grid-template-columns: repeat(4, 1fr) ; /* for internet explorer */;
+  -o-grid-template-columns: repeat(4, 1fr) ; /* for opera browser. */;
+  grid-template-columns: repeat(4, 1fr) ; /* for standar */;
+}/*# sourceMappingURL=index.css.map */
